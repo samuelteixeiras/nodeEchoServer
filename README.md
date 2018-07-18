@@ -34,3 +34,7 @@ curl -X POST \
   -d '{
 	"samuel":"test"
 }'
+
+# Image of message tested
+
+![Print of return ](https://github.com/samuelteixeiras/nodeEchoServer/blob/master/print-page.png)
