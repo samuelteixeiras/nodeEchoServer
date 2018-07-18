@@ -35,6 +35,6 @@ curl -X POST \
 	"samuel":"test"
 }'
 
-# Image of message tested
+## Message returned:
 
-![Print of return ](https://github.com/samuelteixeiras/nodeEchoServer/blob/master/print-page.png)
+![Print](https://github.com/samuelteixeiras/nodeEchoServer/blob/master/print-page.png)
