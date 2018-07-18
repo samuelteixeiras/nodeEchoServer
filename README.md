@@ -6,16 +6,17 @@
 /failureNotification
 
 
-## Steps
+## Steps to create and run docker container
 
 docker build -t <your username>/node-web-app .
 
-### just to check  
-docker images
 docker run -p 8080:3000 -d <your username>/node-web-app
 
 
-## Successful Notification call example:
+
+## After Deploy call the server:
+
+### Successful Notification call example:
 curl -X POST \
   http://localhost:8080/successfulNotification \
   -H 'content-type: application/json' \
@@ -25,7 +26,7 @@ curl -X POST \
 }'
 
 
-## Failure Notification call example:
+### Failure Notification call example:
 curl -X POST \
   http://localhost:8080/failureNotification \
   -H 'content-type: application/json' \
