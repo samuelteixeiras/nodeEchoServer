@@ -1,13 +1,35 @@
-# chat-example
 
-This is the source code for a very simple chat example used for
-the [Getting Started](http://socket.io/get-started/chat/) guide
-of the Socket.IO website.
+# Echo server for post notifications test
 
-Please refer to it to learn how to run this application.
+/successfulNotification
 
-You can also spin up a free Heroku dyno to test it out:
+/failureNotification
 
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/socketio/chat-example)
 
-Besides, the application is deployed on [Now](https://zeit.co/now): https://socketio-chat-example.now.sh/
+## Steps
+
+docker build -t <your username>/node-web-app .
+
+### just to check  
+docker images
+docker run -p 8080:3000 -d <your username>/node-web-app
+
+
+## Successful Notification call example:
+curl -X POST \
+  http://localhost:8080/successfulNotification \
+  -H 'content-type: application/json' \
+  -H 'key: lpdlapdsa' \
+  -d '{
+	"samuel":"test"
+}'
+
+
+## Failure Notification call example:
+curl -X POST \
+  http://localhost:8080/failureNotification \
+  -H 'content-type: application/json' \
+  -H 'key: lpdlapdsa' \
+  -d '{
+	"samuel":"test"
+}'

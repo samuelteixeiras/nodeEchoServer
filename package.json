@@ -8,5 +8,8 @@
   },
   "scripts": {
     "start": "node index.js"
+  },
+  "devDependencies": {
+    "json-pretty-html": "^1.1.2"
   }
 }
