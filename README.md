@@ -8,9 +8,9 @@
 
 ## Steps to create and run docker container
 
-docker build -t <your username>/node-web-app .
+docker build -t username/node-web-app .
 
-docker run -p 8080:3000 -d <your username>/node-web-app
+docker run -p 8080:3000 -d username/node-web-app
 
 
 
