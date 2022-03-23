@@ -6,7 +6,7 @@ Http server to test HTTP POST call, we have two endpoints: successfulNotificatio
 
 ## Message returned example:
 
-![Print](https://github.com/samuelteixeiras/nodeEchoServer/blob/master/img/print.png)
+![Print](https://github.com/samuelteixeiras/nodeEchoServer/blob/master/imgs/print.png)
 
 
 ## Running on local machine
