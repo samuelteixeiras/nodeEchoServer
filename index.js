@@ -1,9 +1,14 @@
-var app = require('express')();
+const express = require('express')
+const app = express()
 var http = require('http').Server(app);
-var io = require('socket.io')(http);
+var io = require('socket.io')(http,{
+  allowEIO3: true,
+});
 var bodyParser = require('body-parser');
 var prettyHtml = require('json-pretty-html').default;
 var port = process.env.PORT || 3000;
+
+app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(req, res){
   res.sendFile(__dirname + '/index.html');
@@ -24,10 +29,10 @@ app.post('/failureNotification', function (req, res) {
 
   try {
     var htmlBody = prettyHtml(JSON.parse(req.body), req.body.dimensions);
-    io.emit('chat message', '<h1>Failure Notification received at:'+ formatDate(new Date(), "dddd h:mm:sstt d MMM yyyy") +'</h1>');
-    io.emit('chat message', '<h3>Header</h3>');
+    io.emit('chat message', '<div class="msg-header-failure">Failure Notification received at:'+ formatDate(new Date(), "dddd h:mm:sstt d MMM yyyy") +'</div>');
+    io.emit('chat message', '<div class="header-failure">Header</div>');
     io.emit('chat message', htmlHeader);
-    io.emit('chat message', '<h3>Body</h3>');
+    io.emit('chat message', '<div class="msg-body-failure">Body</div>');
     io.emit('chat message', htmlBody);
   } catch(e) {
     console.log(e);
@@ -49,10 +54,10 @@ app.post('/successfulNotification', function (req, res) {
 
   try {
     var htmlBody = prettyHtml(JSON.parse(req.body), req.body.dimensions);
-    io.emit('chat message', '<h1>Successful Notification received at:'+ formatDate(new Date(), "dddd h:mm:sstt d MMM yyyy") +'</h1>');
-    io.emit('chat message', '<h3>Header</h3>');
+    io.emit('chat message', '<div class="msg-header-success">Successful Notification received at:'+ formatDate(new Date(), "dddd h:mm:sstt d MMM yyyy") +'</div>');
+    io.emit('chat message', '<div class="msg-header">Header</div>');
     io.emit('chat message', htmlHeader);
-    io.emit('chat message', '<h3>Body</h3>');
+    io.emit('chat message', '<div class="msg-body">Body</div>');
     io.emit('chat message', htmlBody);
   } catch(e) {
     console.log(e);
@@ -154,7 +159,6 @@ function formatDate(date, format, utc) {
 io.on('connection', function(socket){
   socket.on('chat message', function(msg){
     io.emit('chat message', msg);
-
   });
 });
 

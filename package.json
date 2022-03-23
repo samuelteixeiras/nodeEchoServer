@@ -4,7 +4,7 @@
   "description": "echo server with nodejs",
   "dependencies": {
     "express": "^4.15.2",
-    "socket.io": "^2.4.0"
+    "socket.io": "^4.1.2"
   },
   "scripts": {
     "start": "node index.js"

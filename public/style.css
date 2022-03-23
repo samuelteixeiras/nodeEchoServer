@@ -1,0 +1,125 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font: 13px Helvetica, Arial; }
+form { background: #000; padding: 3px; position: fixed; bottom: 0; width: 100%; }
+form input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
+form button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }
+
+
+.msg-header-success {
+    background: #2A9D8F;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    font-size: 19px;
+    width: 50%;
+    border-radius: 1em;
+    margin-left: 25%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.msg-header-failure {
+    background: #E76F51;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    font-size: 19px;
+    width: 50%;
+    border-radius: 1em;
+    margin-left: 25%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.header-failure {
+    color: #E76F51;
+    padding: 5px 10px;
+    font-weight: bold;
+    font-size: 19px;
+    width: 50%;
+    border-radius: 1em;
+    margin-left: 25%;
+    text-align: center;
+}
+
+.msg-header {
+    color: #2A9D8F;
+    padding: 5px 10px;
+    font-weight: bold;
+    font-size: 19px;
+    width: fit-content;
+    border-radius: 1em;
+    margin: auto;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.msg-body {
+    color: #2A9D8F;
+    padding: 5px 10px;
+    font-weight: bold;
+    font-size: 19px;
+    width: fit-content;
+    border-radius: 1em;
+    margin: auto;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.msg-ping {
+    background: #E9C46A;
+    color: #000000;
+    padding: 5px 10px;
+    font-weight: bold;
+    font-size: 19px;
+    width: fit-content;
+    border-radius: 1em;
+    margin: auto;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.msg-body-failure {
+    color: #E76F51;
+    padding: 5px 10px;
+    font-weight: bold;
+    font-size: 19px;
+    width: fit-content;
+    border-radius: 1em;
+    margin: auto;
+    margin-top: 10px;
+    text-align: center;
+}
+
+
+.json-pretty {
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #e6e6e6;
+    border-radius: 1em;
+    margin: auto;
+    /* margin: 13px; */
+    padding: 14px;
+    font-size: 16px;
+    width: fit-content;
+}
+
+.json-selected {
+    background-color: #E9C46A;
+}
+
+.json-string {
+    color: #264653;
+}
+
+.json-key {
+    color: #2A9D8F;
+}
+
+.json-boolean {
+    color: #99c794;
+}
+
+.json-number {
+    color: #99c794;
+}
