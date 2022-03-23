@@ -1,5 +1,5 @@
 
-# Echo server for post notifications test
+# Echo server to test HTTP Post notifications
 
 /successfulNotification
 
@@ -21,9 +21,7 @@ curl -X POST \
   http://localhost:8080/successfulNotification \
   -H 'content-type: application/json' \
   -H 'key: lpdlapdsa' \
-  -d '{
-	"samuel":"test"
-}'
+  -d '{	"samuel":"test"}'
 
 
 ### Failure Notification call example:
@@ -31,13 +29,11 @@ curl -X POST \
   http://localhost:8080/failureNotification \
   -H 'content-type: application/json' \
   -H 'key: lpdlapdsa' \
-  -d '{
-	"samuel":"test"
-}'
+  -d '{	"samuel":"test"}'
 
 ## Message returned:
 
 ![Print](https://github.com/samuelteixeiras/nodeEchoServer/blob/master/print-page.png)
 
 
-Created from https://github.com/socketio/chat-example.git
+Created based on https://github.com/socketio/chat-example.git
