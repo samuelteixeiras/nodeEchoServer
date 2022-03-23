@@ -11,11 +11,11 @@ Http server to test HTTP POST call, we have two endpoints: successfulNotificatio
 
 ## Running on local machine
 
-clone the repository: git clone https://github.com/samuelteixeiras/nodeEchoServer.git
+Clone the repository: git clone https://github.com/samuelteixeiras/nodeEchoServer.git
 
 Go into the folder: `nodeEchoServer`
 
-run the commands:
+Run the commands:
 
 `npm install`
 
