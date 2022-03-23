@@ -1,5 +1,5 @@
 
-# Echo server to test HTTP Post call
+# Echo Server To Test HTTP Post Calls
 
 Http server to test HTTP POST call, we have two endpoints: successfulNotification and failureNotification.
 
